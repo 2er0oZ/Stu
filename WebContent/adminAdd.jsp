@@ -14,7 +14,7 @@
     <div class="main">
         <div class="content">
             <div class="form_div">
-			    <a href="<%=request.getContextPath() %>/adminList.jsp" class="button_back">《返回</a>
+			    <a href="<%=request.getContextPath() %>/adminList.jsp" class="button_back">返回</a>
                 <br>
                 <br>
                 <div class="form_box">

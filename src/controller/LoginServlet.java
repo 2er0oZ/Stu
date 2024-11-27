@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.net.URLEncoder;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,15 +34,16 @@ public class LoginServlet extends HttpServlet {
 		String type = request.getParameter("type");
 		
 		if (type.equals("student")) {
-
 			Student student = studentService.getStudentByNo(username);
 			// 登录判断
 			if (student != null) {
 				// 登录成功
 				if (student.getPassword().equals(password)) {
 					request.getSession().setAttribute("student", student);
+					//赋予学生属性
+					request.getSession().setAttribute("userType", "student");
 					// 跳转到首页
-					response.sendRedirect("index.jsp");
+					response.sendRedirect("index.jsp?no=" + URLEncoder.encode(username, "UTF-8"));
 				} else {
 					// 密码错误
 					request.setAttribute("errorMsg", "密码错误");
@@ -58,6 +61,8 @@ public class LoginServlet extends HttpServlet {
 				// 登录成功
 				if (loginUser.getPassword().equals(password)) {
 					request.getSession().setAttribute("admin", loginUser);
+					//赋予管理员属性
+					request.getSession().setAttribute("userType", "admin");
 					// 跳转到首页
 					response.sendRedirect("studentList.jsp");
 				} else {
@@ -75,6 +80,5 @@ public class LoginServlet extends HttpServlet {
 			request.setAttribute("errorMsg", "用户名类型错误");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
-
 	}
 }

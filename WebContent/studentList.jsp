@@ -30,17 +30,19 @@
                 <div class="table_box">
                     <table class="table" style="width: 100%">
                         <thead>
-                            <th>学号</th>
-                            <th>姓名</th>
-                            <th>密码</th>
-                            <th>家庭住址</th>
-                            <th>民族</th>
-                            <th>院系</th>
-                            <th>专业</th>
-                            <th>班级</th>
-                            <th>入学日期</th>
-                            <th>创建时间</th>
-                            <th>操作</th>
+                       		<tr>
+	                            <th>学号</th>
+	                            <th>姓名</th>
+	                            <th>密码</th>
+	                            <th>家庭住址</th>
+	                            <th>民族</th>
+	                            <th>院系</th>
+	                            <th>专业</th>
+	                            <th>班级</th>
+	                            <th>入学日期</th>
+	                            <th>创建时间</th>
+                            	<th>操作</th>
+                         	</tr>
                         </thead>
                         <tbody>
                             <%

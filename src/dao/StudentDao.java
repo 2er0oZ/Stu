@@ -96,7 +96,6 @@ public class StudentDao {
      * @return
      */
     public int update(Student student) {
-        // 获取数据库连接
         Connection connection = JDBCUtils.getConnection();
         // 编写sql
         String sql = "update student set name = ?,password = ?,address = ?,nationality = ?,department = ?,major = ?,classes = ?,in_date = ? where no = ?";
@@ -121,7 +120,6 @@ public class StudentDao {
         } catch (SQLException e) {
         	LOGGER.log(Level.SEVERE, "更新学生信息时发生错误", e);
             e.printStackTrace();
-            
         }
         return 0;
     }

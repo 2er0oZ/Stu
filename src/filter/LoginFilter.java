@@ -38,11 +38,5 @@ public class LoginFilter implements Filter {
         } else {
             filterChain.doFilter(request, response);
         }
-
-
-    }
-
-    @Override
-    public void destroy() {
     }
 }

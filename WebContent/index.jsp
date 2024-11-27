@@ -21,11 +21,15 @@
     <div class="main">
         <div class="content">
             <div class="form_div">
-                <a href="<%=request.getContextPath() %>/studentList.jsp" class="button_back">返回</a>
+                <a href="<%=request.getContextPath() %>/login.jsp" class="button_back">返回</a>
                 <br>
                 <br>
-                <div style="text-align: center;color: green">${successMsg}</div>
-                <div style="text-align: center;color: red">${errorMsg}</div>
+                <c:if test="${param.updateStatus == 'success'}">
+				    <div style="text-align: center;color: green">更新成功</div>
+				</c:if>
+				<c:if test="${param.updateStatus == 'error'}">
+				    <div style="text-align: center;color: red">更新失败</div>
+				</c:if>
                 <%
                     // 在request中获取出需要修改的学生的no
                     String studentNo = request.getParameter("no");
