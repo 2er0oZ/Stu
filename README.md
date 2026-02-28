@@ -18,14 +18,14 @@
 ## 数据库设计
 系统主要包含以下数据表（示例）：
 
-*   **t_student (学生表)**
+*   **student (学生表)**
     *   `id`: 主键
     *   `student_id`: 学号
     *   `name`: 姓名
     *   `gender`: 性别
     *   `age`: 年龄
     *   `class_id`: 班级外键
-*   **t_user / t_admin (用户/管理员表)**
+*   **user / admin (用户/管理员表)**
     *   `id`: 主键
     *   `username`: 用户名
     *   `password`: 密码
