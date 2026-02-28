@@ -1,21 +1,4 @@
-Stu-main
-├── src
-│ └── main
-│ ├── java
-│ │ └── com.demo
-│ │ ├── dao # 数据访问层
-│ │ ├── service # 业务逻辑层
-│ │ ├── servlet # 控制层
-│ │ ├── pojo # 实体类
-│ │ └── util # 工具类 (DBUtil等)
-│ ├── resources # 配置文件
-│ └── webapp
-│ ├── static # 静态资源
-│ ├── WEB-INF
-│ │ └── web.xml # Web应用部署描述符
-│ └── *.jsp # JSP页面
-└── pom.xml # Maven依赖配置
-
+# 学生信息管理系统(Java Web)
 
 ## 功能模块
 
